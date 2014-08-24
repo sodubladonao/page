@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" class="loaded"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>#SóDubladoNão - Pela liberdade de escolha!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="/css/flat-ui.css">
+        <link rel="stylesheet" href="/css/icon-font.css">
+        <link rel="stylesheet" href="/css/style.css">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="html5shiv.js"></script>
+        <![endif]-->
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>    
+    </head>
+
+    <body>
+
+<!-- header-21 -->
+        <header class="header-21">
+            <div class="container">
+                <div class="navbar span12">
+                    <div class="navbar-inner">
+                        <button type="button" class="btn btn-navbar"> </button>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li class="active"><a href="#">INÍCIO</a></li>
+                                <li><a href="#" class="scrollToSection" data-scrollto="info">O QUE VOCÊ ENCONTRA AQUI?</a></li>
+                                <li><a href="#" class="scrollToSection" data-scrollto="redes">REDES DE CINEMA</a></li>
+                                <li><a href="#" class="scrollToSection" data-scrollto="filmes">FILMES</a></li>                                
+                                <li><a href="#" class="scrollToSection" data-scrollto="cidades">CIDADES</a></li>                                
+                                <li><a href="#" class="scrollToSection" data-scrollto="cinemas">CINEMAS</a></li>                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="header-21-sub v-center" style="height: 609px;">
+            <div>
+                <div class="background">&nbsp;</div>
+                <div class="container">
+                    <h3><img src="img/logo.gif" alt="" style="width:600px;height:92px">
+                    <span class="brand">
+                        Pela liberdade de escolha!
+                    </span>
+                    </h3>
+                    <p class="lead">Aqui você encontrará informações sobre a exibição de cópias dubladas ou legendadas.<br/>
+                        Você poderá acompanhar, toda semana, como as redes de cinema estão limitando cada vez mais a sua liberdade de escolha.
+                    </p>
+                    <br><br><br><br><br><br>
+                    <a class="control-btn fui-arrow-down scrollToSection" href="#" data-scrollTo="info"> </a>
+                </div>
+                
+            </div>
+        </section>
+
+
+<!-- content-6  -->
+        <section class="content-17 v-center">
+            <div>
+                <div id="info" class="container">
+                    <h3>
+                        Até onde vai sua liberdade de escolha?
+                        <canvas id="myCanvas" width="800" height="50" style="border:0px solid #c3c3c3;">
+                    </h3>
+                    <p class="lead">Cada vez mais as redes de cinema estão tirando a sua liberdade de escolha entre filmes dublados ou legendados.</p>
+                    <p class="lead">Este site foi criado para demonstrar como os filmes dublados estão se tornando a única opção para os brasileiros que gostam de ir ao cinema.</p>
+                    <div class="row features">
+                        <div class="span4 offset2">
+                            <h6>Redes de cinema</h6>
+                            <p>Quais redes de cinema possuem mais filmes/cinemas com opção única?</p>
+                        </div>
+                        <div class="span4 offset1">
+                            <h6>Cinemas</h6>
+                            <p>Quais cinemas você deve evitar se quiser ter opções?</p>
+                        </div>
+                    </div>
+                    <div class="row features">
+                        <div class="span4 offset2">
+                            <h6>Filmes</h6>
+                            <p>Quais são os campeões do troféu "nós escolhemos por você"?</p>
+                        </div>
+                        <div class="span4 offset1">
+                            <h6>Cidades</h6>
+                            <p>Quais são as cidades onde os moradores sofrem por falta de opção?</p>
+                        </div>
+                    </div>
+                    <div class="row features">
+                    <br><br><br><br><br><br><br><br><br>
+                    <a class="control-btn fui-arrow-down scrollToSection" href="#" data-scrollTo="redes"> </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- content-17  -->
+        <section class="content-17 v-center" style="height: auto;">
+            <div id="redes"  class="container">
+                    <h3>
+                        Quais redes de cinema limitam mais sua liberdade de escolha?
+                    </h3>
+                    <p class="lead">O gráfico abaixo mostra quais redes de cinema possuem o maior número de filmes (por cinema) em que não há possibilidade de escolha por cópias legendados.</p>
+                    <div class="row features">
+                        <canvas id="chartRede" width="400" height="200"></canvas>
+                    </div>
+                    <div class="row features">
+                        <br><br><br><br>
+                        <a class="control-btn fui-arrow-down scrollToSection" href="#" data-scrollTo="filmes"> </a>
+                    </div>
+            </div>
+        </section>
+
+<!-- content-26  -->
+        <section class="content-17 v-center" style="height: auto;">
+            <div  id="filmes"  class="container">
+                    <h3>
+                        Quais são os filmes campeões da falta de escolha?
+                    </h3>
+                    <p class="lead">O gráfico abaixo mostra quais filmes possuem mais exibições em cinemas em que não há opção por legendados.</p>
+                    <div class="row features">
+                          <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+                    </div>
+                    <div class="row features">
+                        <br><br><br><br><br><br><br><br>
+                        <a class="control-btn fui-arrow-down scrollToSection" href="#" data-scrollTo="cidades"> </a>
+                    </div>                
+            </div>
+        </section>
+
+        <section class="content-17  v-center" style="height: auto;">
+            <div  id="cidades" class="container">
+                    <h3>
+                        Quais são as cidades que os moradores sofrem por falta de opção?
+                    </h3>
+                    <p class="lead">O gráfico abaixo mostra quais cidades possuem mais filmes em cinemas que não possuem uma cópia legendada.</p>
+                    <div class="row features">
+                         <center><iframe src="map.html" width="80%" height="400px"  frameborder="0" scrolling="no" ></iframe> </center>
+                        
+                    </div>
+                    <div class="row features">
+                                                <br><br><br><br><br><br><br><br>
+                        <a class="control-btn fui-arrow-down scrollToSection" href="#" data-scrollTo="cinemas"> </a>
+                    </div>
+            </div>
+        </section>            
+
+        <section class="content-17  v-center" style="height: auto;">
+            <div  id="cinemas" class="container">
+                    <h3>
+                        Quais são os cinemas que você deve evitar se quiser ter liberdade de escolha?
+                    </h3>
+                    <p class="lead"></p>
+                <table class="table table-striped">
+                    <tbody id="tblcinemas"></tbody>
+                </table>     
+            </div>
+        </section>                        
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="./index2_files/jquery-1.8.3.min.js"></script>
+        <script src="./index2_files/bootstrap.min.js"></script>
+        <!--[if lt IE 8]>
+        <script src="/flat-ui/js/icon-font-ie7.js"></script>
+        <![endif]-->
+        <script src="./index2_files/jquery.scrollTo-1.4.3.1-min.js"></script>
+        
+        
+        <script src="Chart.min.js"></script>
+        <script src="stats.js"></script>
+<script>
+var width = 800;
+var dublado = 64.46;
+var legendado = 35.54;
+var c = document.getElementById("myCanvas");
+var barDublado = c.getContext("2d");
+barDublado.fillStyle = "#0099ff";
+barDublado.fillRect(0,0,width*(dublado/100),50);
+var barLegendado = c.getContext("2d");
+barLegendado.fillStyle = "#FF0000";
+barLegendado.fillRect(width*(dublado/100),0,800-width*(dublado/100),50);
+
+var textDublado = c.getContext("2d");
+textDublado.fillStyle = "white";
+textDublado.font = "25px Arial";
+textDublado.fillText(dublado + "% Dublado", ((width*(dublado/100))/2)-100, 35);
+
+var textLegendado = c.getContext("2d");
+textLegendado.fillStyle = "white";
+textLegendado.font = "25px Arial";
+textLegendado.fillText(legendado + "% Legendado", (((width*(dublado/100))/2)+((width*(legendado/100))/2))+150, 35);    
+</script>
+  <script type="text/javascript">
+stats.PorFilme.data = [];
+for(i = 0; i < stats.PorFilme.Filmes.length; i++)
+{
+    stats.PorFilme.data[i] = {};
+    stats.PorFilme.data[i].label = stats.PorFilme.Filmes[i];
+    stats.PorFilme.data[i].y = stats.PorFilme.Valores[i];
+    stats.PorFilme.data[i].x = stats.PorFilme.Filmes.length - i;
+}      
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+
+        axisX:{
+                        interval: 1,
+                        gridThickness: 0
+        },
+      data: [
+      {        
+        axisYType: "secondary",
+        type: "bar",
+        dataPoints: stats.PorFilme.data
+      }
+        
+      ]
+      ,
+      legend:{
+        cursor:"pointer",
+        itemclick:function(e) {
+          if(typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible){
+            e.dataSeries.visible = false;
+          }
+          else {
+            e.dataSeries.visible = true;
+          }
+          
+          chart.render();
+        }
+      }
+    });
+
+    chart.render();
+  }
+  </script>
+ <script type="text/javascript" src="canvasjs.min.js"></script></head>            
+<script>
+function renderChart(chart,label,labels,data,legendTemplate)
+{
+    var ctx = document.getElementById(chart).getContext("2d");
+    var data = {
+        labels: labels,
+        datasets: [
+            {
+                label: label,
+                fillColor: "#0099FF",
+                strokeColor: "#0099FF",
+                highlightFill: "#0099FF",
+                highlightStroke: "#0099FF",
+                data: data
+            }
+        ]
+    };    
+    var options = {
+			responsive : true
+		};
+    if (legendTemplate != null)
+    {
+        options.legendTemplate = legendTemplate;
+    }        
+console.log(options);    
+    var barChart = new Chart(ctx).Bar(data, options);    
+}
+renderChart('chartRede','Redes de Cinema',stats.PorRede.Redes,stats.PorRede.Valores);
+</script>
+<script>
+    $(".scrollToSection").click(function() {
+    var offset = 0; //Offset of 20px
+    var element = $(this).data('scrollto');
+    console.log(element);
+    $('html, body').animate({
+        scrollTop: $("#"+element).offset().top + offset
+    }, 2000);
+});
+</script>
+<script>
+    $.each(stats.PorCinema.Cinemas,function(i,item){
+    if (i % 5 == 0)
+    {
+       if (i > 0)
+          $('#tblcinemas').append('</tr>');
+       $('#tblcinemas').append('<tr>');
+    }
+    $('#tblcinemas').append('<td>'+item+'</td>');
+});
+$('#tblcinemas').append('</tr>');
+</script>
+</body></html>
